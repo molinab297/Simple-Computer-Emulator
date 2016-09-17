@@ -48,19 +48,7 @@ The Simple Computer Emulator is a three decimal digit virtual machine. It contai
  
 Each instruction word is composed of a one decimal digit operation code and a two decimal digit address. The left most digit is taken to be the operation code, the right two digits are the address.
  
-The following is the instruction set for this emulator:
- 
-Op-code	Description
-0 _ _	Input – Copy the current input card into cell number _ _ and advance to the next card. Halt execution if the input card is empty.
-1 _ _	Output – Copy the contents of cell number _ _ to the current output card and advance to the next card.
-2 _ _	Add – Add the contents of cell number _ _ to the value of the accumulator. Sets Carry Bit on overflow.
-3 _ _	Subtract – Subtract the contents of cell number _ _ from the current value of the accumulator. Sets Carry Bit on overflow.
-4 _ _	Load Accumulator – Clear the accumulator and carry flag, then copy the contents of cell number _ _ into the accumulator.
-5 _ _	Store Accumulator – Copy the tree digits of the accumulator into cell number _ _.
-6 _ _	Jump – Place the current value of the program counter into cell 99. Next, change the value of the program counter to _ _.
-7 _ _	Test Accumulator – If the value of the accumulator is negative, change the value of the program counter to _ _.
-8 x y	Shift – Shift the accumulator left x digits, then shift the result right y digits. Shift digits through the Carry Bit and enter zeros from the left and right appropriately.
-9 _ _	Halt – Replace the value of the program counter with cell number _ _ and then halt execution.
+The full instruction set can be seen inside the appilcation by clicking the OpCodes button on the top right corner of the screen.
  
 # Execution Mode
  
